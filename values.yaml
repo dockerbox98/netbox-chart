@@ -388,7 +388,8 @@ podAnnotations: {}
 
 podSecurityContext:
   # fsGroup: 1000
-  runAsNonRoot: true
+  runAsUser: 0
+  #runAsNonRoot: true
   # runAsUser: 1000
   # runAsGroup: 1000
 
@@ -397,9 +398,9 @@ securityContext:
     drop:
       - ALL
   readOnlyRootFilesystem: true
-  runAsNonRoot: true
-  runAsUser: 1000
-  runAsGroup: 1000
+  #runAsNonRoot: true
+  runAsUser: 0
+  #runAsGroup: 1000
 
 service:
   annotations: {}
